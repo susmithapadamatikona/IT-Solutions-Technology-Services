@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Technology client dashboard — projects, analytics, and billing overview.">
+  <title>Client Dashboard — Stackly Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css?v=navy-teal-1">
+  <link rel="stylesheet" href="css/neumorphism.css?v=3">
+</head>
+<body>
+  <div class="preloader" role="status" aria-live="polite" aria-label="Loading">
+    <div class="preloader__inner">
+      <div class="preloader__mark">
+        <div class="preloader__orbit" aria-hidden="true"></div>
+        <span class="themed-logo" aria-hidden="true"></span>
+      </div>
+      <div class="preloader__bar" aria-hidden="true"><span></span></div>
+    </div>
+    <span class="sr-only">Loading...</span>
+  </div>
+ 
+  <div class="dash">
+    <div class="dash-overlay" aria-hidden="true"></div>
+
+    <aside class="dash-sidebar" aria-label="Client dashboard navigation">
+      <a class="brand" href="index.html" style="color: #fff;">
+        <span class="brand__logo themed-logo" role="img" aria-label="Stackly Technology"></span>
+      </a>
+
+      <div class="dash-user">
+        <div class="dash-user__avatar" aria-hidden="true"><i class="fa-solid fa-user"></i></div>
+        <div class="dash-user__meta">
+          <strong data-user-name>Your name</strong>
+          <span class="mono" data-user-email>you@company.com</span>
+        </div>
+      </div>
+
+      <nav class="dash-nav">
+        <a href="#overview" class="is-active"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i> Overview</a>
+        <a href="#projects"><i class="fa-solid fa-folder-open" aria-hidden="true"></i> Projects</a>
+        <a href="#analytics"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Analytics</a>
+        <a href="#billing"><i class="fa-solid fa-credit-card" aria-hidden="true"></i> Billing</a>
+        <a href="#notifications"><i class="fa-solid fa-bell" aria-hidden="true"></i> Notifications</a>
+        <a href="#settings"><i class="fa-solid fa-gear" aria-hidden="true"></i> Settings</a>
+      </nav>
+
+      <a href="login.html" class="btn btn--ghost btn--block" data-logout><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Logout</a>
+    </aside>
+
+    <div class="dash-main">
+      <header class="dash-topbar">
+        <div class="dash-topbar__start">
+          <button type="button" class="sidebar-toggle" aria-label="Open navigation menu" aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
+          <h2 class="dash-topbar__title mt-0 mb-0" data-dash-title>Overview</h2>
+        </div>
+
+        <label class="search-field dash-topbar__search">
+          <span class="sr-only">Search dashboard</span>
+          <i class="fa-solid fa-magnifying-glass muted" aria-hidden="true"></i>
+          <input type="search" placeholder="Search projects, invoices…" autocomplete="off">
+        </label>
+      </header>
+
+      <div class="dash-content">
+        <!-- Overview -->
+        <section class="dash-view is-active" data-dash-view="overview" aria-labelledby="client-overview-heading">
+          <div>
+            <h1 id="client-overview-heading" class="mt-0" style="font-size: 1.65rem;">Overview</h1>
+            <p class="muted mb-0">Welcome back — here is what is happening across your workspace today.</p>
+          </div>
+
+          <div class="kpi-grid">
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">Active projects</p>
+              <p class="kpi__value">12</p>
+              <p class="kpi__delta"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +2 this month</p>
+            </article>
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">API uptime</p>
+              <p class="kpi__value">99.98%</p>
+              <p class="kpi__delta">Last 30 days</p>
+            </article>
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">Monthly spend</p>
+              <p class="kpi__value">$1,840</p>
+              <p class="kpi__delta" style="color: var(--amber);"><i class="fa-solid fa-minus" aria-hidden="true"></i> 4% vs last month</p>
+            </article>
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">Open tickets</p>
+              <p class="kpi__value">3</p>
+              <p class="kpi__delta">Avg. response 2h</p>
+            </article>
+          </div>
+
+          <div class="dash-grid-2">
+            <section class="dash-panel neo-card" aria-labelledby="client-chart-title" data-aos="fade-up">
+              <div class="dash-panel__head">
+                <h3 id="client-chart-title">Usage trend</h3>
+                <span class="badge">Live</span>
+              </div>
+              <div class="chart-placeholder" role="img" aria-label="Line chart placeholder showing API request volume over the last seven days"></div>
+            </section>
+
+            <section class="dash-panel neo-card" aria-labelledby="client-activity-title" data-aos="fade-up">
+              <div class="dash-panel__head">
+                <h3 id="client-activity-title">Activity feed</h3>
+              </div>
+              <ul class="activity-feed">
+                <li>
+                  <span><strong>Deploy succeeded</strong> — Signal API v2.4 to production <span class="muted">· 12m ago</span></span>
+                </li>
+                <li>
+                  <span><strong>Invoice paid</strong> — Pro plan renewal <span class="muted">· 2h ago</span></span>
+                </li>
+                <li>
+                  <span><strong>New collaborator</strong> — Sam Rivera invited to Atlas project <span class="muted">· Yesterday</span></span>
+                </li>
+                <li>
+                  <span><strong>Alert cleared</strong> — Latency returned to baseline <span class="muted">· Yesterday</span></span>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <section class="dash-panel neo-card" aria-labelledby="client-project-list" data-aos="fade-up">
+            <div class="dash-panel__head">
+              <h3 id="client-project-list">Project shortcuts</h3>
+            </div>
+            <ul class="info-list">
+              <li>
+                <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+                <div>
+                  <strong>Launch Atlas CRM sprint</strong>
+                  <p class="muted mb-0" style="font-size: 0.9rem;">3 tasks due this week · 68% complete</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                <div>
+                  <strong>Rotate API keys</strong>
+                  <p class="muted mb-0" style="font-size: 0.9rem;">Scheduled rotation in 5 days</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-file-invoice" aria-hidden="true"></i>
+                <div>
+                  <strong>Download March invoice</strong>
+                  <p class="muted mb-0" style="font-size: 0.9rem;">PDF ready · $1,840.00</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- Projects -->
+        <section class="dash-view" data-dash-view="projects" hidden aria-labelledby="client-projects-heading">
+          <div>
+            <h1 id="client-projects-heading" class="mt-0" style="font-size: 1.65rem;">Projects</h1>
+            <p class="muted mb-0">All workspaces, environments, and recent deploys in one place.</p>
+          </div>
+
+          <section class="dash-panel neo-card" data-table-page data-per-page="5" aria-labelledby="client-projects-table" data-aos="fade-up">
+            <div class="dash-panel__head">
+              <h3 id="client-projects-table">Your projects</h3>
+             
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Project</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Environment</th>
+                  <th scope="col">Last deploy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Atlas CRM</td>
+                  <td><span class="badge badge--success">Healthy</span></td>
+                  <td>Production</td>
+                  <td>Today, 09:14</td>
+                </tr>
+                <tr>
+                  <td>Signal API</td>
+                  <td><span class="badge badge--success">Healthy</span></td>
+                  <td>Production</td>
+                  <td>Today, 08:02</td>
+                </tr>
+                <tr>
+                  <td>Northwind Mobile</td>
+                  <td><span class="badge badge--warn">Review</span></td>
+                  <td>Staging</td>
+                  <td>Mar 8, 16:40</td>
+                </tr>
+                <tr>
+                  <td>Graphite Docs</td>
+                  <td><span class="badge">Draft</span></td>
+                  <td>Preview</td>
+                  <td>Mar 7, 11:22</td>
+                </tr>
+                <tr>
+                  <td>Beacon Analytics</td>
+                  <td><span class="badge badge--success">Healthy</span></td>
+                  <td>Production</td>
+                  <td>Mar 6, 19:05</td>
+                </tr>
+                <tr>
+                  <td>Pulse Webhooks</td>
+                  <td><span class="badge badge--danger">Incident</span></td>
+                  <td>Production</td>
+                  <td>Mar 5, 07:18</td>
+                </tr>
+                <tr>
+                  <td>Orbit SSO</td>
+                  <td><span class="badge badge--success">Healthy</span></td>
+                  <td>Production</td>
+                  <td>Mar 4, 14:51</td>
+                </tr>
+              </tbody>
+            </table>
+            <nav class="pagination" data-table-pager aria-label="Projects table pagination"></nav>
+          </section>
+        </section>
+
+        <!-- Analytics -->
+        <section class="dash-view" data-dash-view="analytics" hidden aria-labelledby="client-analytics-heading">
+          <div>
+            <h1 id="client-analytics-heading" class="mt-0" style="font-size: 1.65rem;">Analytics</h1>
+            <p class="muted mb-0">Request volume, latency, and error rates for the last 30 days.</p>
+          </div>
+
+          <div class="kpi-grid">
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">Requests</p>
+              <p class="kpi__value">4.2M</p>
+              <p class="kpi__delta"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +11% MoM</p>
+            </article>
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">p95 latency</p>
+              <p class="kpi__value">182ms</p>
+              <p class="kpi__delta" style="color: var(--signal-2);">−14ms</p>
+            </article>
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">Error rate</p>
+              <p class="kpi__value">0.12%</p>
+              <p class="kpi__delta">Within SLO</p>
+            </article>
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">Uptime</p>
+              <p class="kpi__value">99.98%</p>
+              <p class="kpi__delta">Last 30 days</p>
+            </article>
+          </div>
+
+          <section class="dash-panel neo-card" aria-labelledby="analytics-chart" data-aos="fade-up">
+            <div class="dash-panel__head">
+              <h3 id="analytics-chart">API traffic</h3>
+              <span class="badge">7 days</span>
+            </div>
+            <div class="chart-placeholder" role="img" aria-label="Analytics line chart placeholder"></div>
+          </section>
+        </section>
+
+        <!-- Billing -->
+        <section class="dash-view" data-dash-view="billing" hidden aria-labelledby="client-billing-heading">
+          <div>
+            <h1 id="client-billing-heading" class="mt-0" style="font-size: 1.65rem;">Billing</h1>
+            <p class="muted mb-0">Plan details, invoices, and payment method for your workspace.</p>
+          </div>
+
+          <div class="kpi-grid">
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">Current plan</p>
+              <p class="kpi__value" style="font-size: 1.35rem;">Pro</p>
+              <p class="kpi__delta">Renews Apr 1</p>
+            </article>
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">This month</p>
+              <p class="kpi__value">$1,840</p>
+              <p class="kpi__delta">Usage + seats</p>
+            </article>
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">Seats</p>
+              <p class="kpi__value">18</p>
+              <p class="kpi__delta">2 pending invites</p>
+            </article>
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">Credits</p>
+              <p class="kpi__value">$120</p>
+              <p class="kpi__delta">Applied next invoice</p>
+            </article>
+          </div>
+
+          <section class="dash-panel neo-card" aria-labelledby="billing-invoices" data-aos="fade-up">
+            <div class="dash-panel__head">
+              <h3 id="billing-invoices">Recent invoices</h3>
+              
+            </div>
+            <ul class="info-list">
+              <li>
+                <i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i>
+                <div>
+                  <strong>March 2026 — $1,840.00</strong>
+                  <p class="muted mb-0" style="font-size: 0.9rem;">Paid · PDF ready</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i>
+                <div>
+                  <strong>February 2026 — $1,920.00</strong>
+                  <p class="muted mb-0" style="font-size: 0.9rem;">Paid · PDF ready</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i>
+                <div>
+                  <strong>January 2026 — $1,760.00</strong>
+                  <p class="muted mb-0" style="font-size: 0.9rem;">Paid · PDF ready</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- Notifications -->
+        <section class="dash-view" data-dash-view="notifications" hidden aria-labelledby="client-notifications-heading">
+          <div>
+            <h1 id="client-notifications-heading" class="mt-0" style="font-size: 1.65rem;">Notifications</h1>
+            <p class="muted mb-0">Deploy alerts, billing updates, and collaborator activity.</p>
+          </div>
+
+          <section class="dash-panel neo-card" aria-labelledby="notif-list" data-aos="fade-up">
+            <div class="dash-panel__head">
+              <h3 id="notif-list">Inbox</h3>
+              <span class="badge badge--warn">3 unread</span>
+            </div>
+            <ul class="activity-feed">
+              <li>
+                <span><strong>Deploy succeeded</strong> — Signal API v2.4 to production <span class="muted">· 12m ago</span></span>
+              </li>
+              <li>
+                <span><strong>Invoice paid</strong> — Pro plan renewal <span class="muted">· 2h ago</span></span>
+              </li>
+              <li>
+                <span><strong>New collaborator</strong> — Sam Rivera invited to Atlas project <span class="muted">· Yesterday</span></span>
+              </li>
+              <li>
+                <span><strong>Alert cleared</strong> — Latency returned to baseline <span class="muted">· Yesterday</span></span>
+              </li>
+              <li>
+                <span><strong>API key rotation due</strong> — Action needed in 5 days <span class="muted">· 2 days ago</span></span>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- Settings -->
+        <section class="dash-view" data-dash-view="settings" hidden aria-labelledby="client-settings-heading">
+          <div>
+            <h1 id="client-settings-heading" class="mt-0" style="font-size: 1.65rem;">Settings</h1>
+            <p class="muted mb-0">Update workspace profile, notification preferences, and security.</p>
+          </div>
+
+          <section class="dash-panel neo-card" aria-labelledby="client-settings-form" data-aos="fade-up">
+            <div class="dash-panel__head">
+              <h3 id="client-settings-form">Workspace profile</h3>
+            </div>
+            <form class="form" data-validate data-success-redirect="404.html" action="404.html" method="post">
+              <div class="field">
+                <label for="client-workspace">Workspace name</label>
+                <input type="text" id="client-workspace" name="workspace" value="Acme Product">
+              </div>
+              <div class="field">
+                <label for="client-email">Billing email</label>
+                <input type="email" id="client-email" name="email" value="you@gmail.com">
+              </div>
+              <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem;">
+                <input type="checkbox" name="deploy_alerts" checked style="width: auto; min-height: auto;">
+                Email me on deploy failures
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem;">
+                <input type="checkbox" name="billing_alerts" checked style="width: auto; min-height: auto;">
+                Email me when invoices are ready
+              </label>
+              <button type="submit" class="btn btn--secondary">Save changes</button>
+            </form>
+          </section>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js?v=aos-site-1" defer></script>
+</body>
+</html>

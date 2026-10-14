@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create your Stackly Technology account — Graphite Signal theme.">
+  <title>Create Account — Stackly Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css?v=navy-teal-1">
+  <link rel="stylesheet" href="css/neumorphism.css?v=3">
+</head>
+<body class="page-auth">
+    <div class="preloader" role="status" aria-live="polite" aria-label="Loading">
+    <div class="preloader__inner">
+      <div class="preloader__mark">
+        <div class="preloader__orbit" aria-hidden="true"></div>
+        <span class="themed-logo" aria-hidden="true"></span>
+      </div>
+      <div class="preloader__bar" aria-hidden="true"><span></span></div>
+    </div>
+    <span class="sr-only">Loading...</span>
+  </div>
+
+  <div class="site-bg" aria-hidden="true"></div>
+
+  <main id="main">
+    <div class="auth-page auth-page--cover">
+      <div class="auth-page__bg" aria-hidden="true">
+        <img src="Images/auth-panel.webp" width="1600" height="1200" alt="">
+      </div>
+
+      <div class="auth-page__panel">
+        <div class="auth-card auth-card--glass neo-card" data-aos="zoom-in">
+          <a class="brand auth-card__brand" href="index.html" aria-label="Stackly Technology — home">
+            <span class="brand__logo themed-logo" role="img" aria-label="Stackly Technology"></span>
+          </a>
+          <h1 class="auth-card__title">Create your account</h1>
+          <p class="auth-card__lead">Start your trial and jump into the right dashboard.</p>
+
+          <form class="form" data-validate data-auth-redirect="login.html" action="#" method="post" novalidate>
+            <div class="field">
+              <label for="register-name">Full name</label>
+              <input type="text" id="register-name" name="name" autocomplete="name" placeholder="Enter name" required>
+              <span class="field__error" role="alert">Please enter your name.</span>
+            </div>
+
+            <div class="field">
+              <label for="register-email">Work email</label>
+              <input type="email" id="register-email" name="email" autocomplete="email" placeholder="you@company.com" required>
+              <span class="field__error" role="alert">Enter a valid email address.</span>
+            </div>
+
+            <div class="field">
+              <label for="register-password">Password</label>
+              <div class="field__password">
+                <input type="password" id="register-password" name="password" autocomplete="new-password" placeholder="Enter password" required minlength="8">
+                <button class="field__toggle" type="button" data-password-toggle aria-label="Show password">
+                  <i class="fa-regular fa-eye" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="field__error" role="alert">Password must be at least 8 characters.</span>
+            </div>
+
+            <div class="field">
+              <label for="register-confirm">Confirm password</label>
+              <div class="field__password">
+                <input type="password" id="register-confirm" name="confirm" autocomplete="new-password" placeholder="Confirm password" required minlength="8" data-match="#register-password">
+                <button class="field__toggle" type="button" data-password-toggle aria-label="Show password">
+                  <i class="fa-regular fa-eye" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="field__error" role="alert">Passwords must match and be at least 8 characters.</span>
+            </div>
+
+            <fieldset class="auth-role">
+              <legend>Register as</legend>
+              <div class="auth-role__options">
+                <label class="auth-role__option">
+                  <input type="radio" name="role" value="client" checked required>
+                  <span><i class="fa-solid fa-user" aria-hidden="true"></i> Client</span>
+                </label>
+                <label class="auth-role__option">
+                  <input type="radio" name="role" value="admin" required>
+                  <span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Admin</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="field field--check">
+              <label class="auth-terms">
+                <input type="checkbox" name="terms" required>
+                <span>I agree to the Terms of Service and Privacy Policy.</span>
+              </label>
+              <span class="field__error" role="alert">Please accept the Terms and Privacy Policy.</span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block">Create account</button>
+
+            <p class="auth-card__switch">
+              Already have an account? <a href="login.html">Sign in</a>
+            </p>
+          </form>
+
+          <a class="auth-card__home" href="index.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to home</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js?v=aos-site-1" defer></script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Technology admin dashboard — users, revenue, content moderation, and settings.">
+  <title>Admin Dashboard — Stackly Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css?v=navy-teal-1">
+  <link rel="stylesheet" href="css/neumorphism.css?v=3">
+</head>
+<body>
+  <div class="preloader" role="status" aria-live="polite" aria-label="Loading">
+    <div class="preloader__inner">
+      <div class="preloader__mark">
+        <div class="preloader__orbit" aria-hidden="true"></div>
+        <span class="themed-logo" aria-hidden="true"></span>
+      </div>
+      <div class="preloader__bar" aria-hidden="true"><span></span></div>
+    </div>
+    <span class="sr-only">Loading...</span>
+  </div>
+ 
+
+  <div class="dash">
+    <div class="dash-overlay" aria-hidden="true"></div>
+
+    <aside class="dash-sidebar" aria-label="Admin dashboard navigation">
+      <a class="brand" href="index.html" style="color: #fff;">
+        <span class="brand__logo themed-logo" role="img" aria-label="Stackly Technology"></span>
+      </a>
+
+      <div class="dash-user">
+        <div class="dash-user__avatar" aria-hidden="true"><i class="fa-solid fa-user-shield"></i></div>
+        <div class="dash-user__meta">
+          <strong data-user-name>Your name</strong>
+          <span class="mono" data-user-email>you@company.com</span>
+        </div>
+      </div>
+
+      <nav class="dash-nav">
+        <a href="#dashboard" class="is-active"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i> Dashboard</a>
+        <a href="#users"><i class="fa-solid fa-users" aria-hidden="true"></i> Users</a>
+        <a href="#revenue"><i class="fa-solid fa-sack-dollar" aria-hidden="true"></i> Revenue</a>
+        <a href="#content"><i class="fa-solid fa-newspaper" aria-hidden="true"></i> Content</a>
+        <a href="#moderation"><i class="fa-solid fa-shield" aria-hidden="true"></i> Moderation</a>
+        <a href="#settings"><i class="fa-solid fa-gear" aria-hidden="true"></i> Settings</a>
+      </nav>
+
+      <a href="login.html" class="btn btn--ghost btn--block" data-logout><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Logout</a>
+    </aside>
+
+    <div class="dash-main">
+      <header class="dash-topbar">
+        <div class="dash-topbar__start">
+          <button type="button" class="sidebar-toggle" aria-label="Open navigation menu" aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
+          <h2 class="dash-topbar__title mt-0 mb-0" data-dash-title>Dashboard</h2>
+        </div>
+      </header>
+
+      <div class="dash-content">
+        <!-- Dashboard -->
+        <section class="dash-view is-active" data-dash-view="dashboard" aria-labelledby="admin-dash-heading">
+          <div>
+            <h1 id="admin-dash-heading" class="mt-0" style="font-size: 1.65rem;">Platform overview</h1>
+            <p class="muted mb-0">Monitor revenue, user growth, and moderation queues at a glance.</p>
+          </div>
+
+          <div class="kpi-grid">
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">MRR</p>
+              <p class="kpi__value">$284K</p>
+              <p class="kpi__delta"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +12.4% MoM</p>
+            </article>
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">Active users</p>
+              <p class="kpi__value">18,420</p>
+              <p class="kpi__delta"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +860 this week</p>
+            </article>
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">Churn rate</p>
+              <p class="kpi__value">1.8%</p>
+              <p class="kpi__delta" style="color: var(--signal-2);">Within target</p>
+            </article>
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">Open reports</p>
+              <p class="kpi__value">14</p>
+              <p class="kpi__delta" style="color: var(--amber);">5 need review</p>
+            </article>
+          </div>
+
+          <div class="dash-grid-2">
+            <section class="dash-panel neo-card" aria-labelledby="admin-revenue-chart" data-aos="fade-up">
+              <div class="dash-panel__head">
+                <h3 id="admin-revenue-chart">Revenue trend</h3>
+                <span class="badge badge--success">Q1</span>
+              </div>
+              <div class="chart-placeholder" role="img" aria-label="Bar chart placeholder showing monthly recurring revenue growth"></div>
+            </section>
+
+            <section class="dash-panel neo-card" aria-labelledby="admin-activity" data-aos="fade-up">
+              <div class="dash-panel__head">
+                <h3 id="admin-activity">Admin activity</h3>
+              </div>
+              <ul class="activity-feed">
+                <li><span><strong>Role updated</strong> — Priya Shah promoted to Editor <span class="muted">· 8m ago</span></span></li>
+                <li><span><strong>Payout processed</strong> — Affiliate batch #8821 <span class="muted">· 1h ago</span></span></li>
+                <li><span><strong>Post flagged</strong> — Blog comment awaiting review <span class="muted">· 3h ago</span></span></li>
+                <li><span><strong>Plan changed</strong> — Enterprise trial extended <span class="muted">· Yesterday</span></span></li>
+              </ul>
+            </section>
+          </div>
+
+          <section class="dash-panel neo-card" aria-labelledby="admin-users-chart" data-aos="fade-up">
+            <div class="dash-panel__head">
+              <h3 id="admin-users-chart">User growth</h3>
+            </div>
+            <div class="chart-placeholder" style="height: 180px;" role="img" aria-label="Area chart placeholder showing new user signups over time"></div>
+          </section>
+        </section>
+
+        <!-- Users -->
+        <section class="dash-view" data-dash-view="users" hidden aria-labelledby="admin-users-heading">
+          <div>
+            <h1 id="admin-users-heading" class="mt-0" style="font-size: 1.65rem;">Users</h1>
+            <p class="muted mb-0">Manage roles, invites, and account status across the platform.</p>
+          </div>
+
+          <section class="dash-panel neo-card" data-table-page data-per-page="5" aria-labelledby="admin-users-table" data-aos="fade-up">
+            <div class="dash-panel__head">
+              <h3 id="admin-users-table">All users</h3>
+              
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Role</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Joined</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Morgan Chen</td>
+                  <td>morgan@stackly.io</td>
+                  <td><span class="badge">Admin</span></td>
+                  <td><span class="badge badge--success">Active</span></td>
+                  <td>Jan 12, 2024</td>
+                </tr>
+                <tr>
+                  <td>Priya Shah</td>
+                  <td>priya@stackly.io</td>
+                  <td><span class="badge badge--warn">Editor</span></td>
+                  <td><span class="badge badge--success">Active</span></td>
+                  <td>Feb 3, 2024</td>
+                </tr>
+                <tr>
+                  <td>Jordan Lee</td>
+                  <td>jordan@acme.co</td>
+                  <td><span class="badge badge--success">Client</span></td>
+                  <td><span class="badge badge--success">Active</span></td>
+                  <td>Mar 18, 2024</td>
+                </tr>
+                <tr>
+                  <td>Sam Rivera</td>
+                  <td>sam@northwind.app</td>
+                  <td><span class="badge badge--success">Client</span></td>
+                  <td><span class="badge badge--warn">Pending</span></td>
+                  <td>Mar 28, 2024</td>
+                </tr>
+                <tr>
+                  <td>Alex Morgan</td>
+                  <td>alex@orbit.dev</td>
+                  <td><span class="badge badge--success">Client</span></td>
+                  <td><span class="badge badge--danger">Suspended</span></td>
+                  <td>Apr 2, 2024</td>
+                </tr>
+                <tr>
+                  <td>Casey Wu</td>
+                  <td>casey@stackly.io</td>
+                  <td><span class="badge badge--warn">Editor</span></td>
+                  <td><span class="badge badge--success">Active</span></td>
+                  <td>May 9, 2024</td>
+                </tr>
+                <tr>
+                  <td>Riley Brooks</td>
+                  <td>riley@beacon.io</td>
+                  <td><span class="badge badge--success">Client</span></td>
+                  <td><span class="badge badge--success">Active</span></td>
+                  <td>Jun 14, 2024</td>
+                </tr>
+              </tbody>
+            </table>
+            <nav class="pagination" data-table-pager aria-label="Users table pagination"></nav>
+          </section>
+        </section>
+
+        <!-- Revenue -->
+        <section class="dash-view" data-dash-view="revenue" hidden aria-labelledby="admin-revenue-heading">
+          <div>
+            <h1 id="admin-revenue-heading" class="mt-0" style="font-size: 1.65rem;">Revenue</h1>
+            <p class="muted mb-0">Track MRR, churn, and plan mix for the current quarter.</p>
+          </div>
+
+          <div class="kpi-grid">
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">MRR</p>
+              <p class="kpi__value">$284K</p>
+              <p class="kpi__delta"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +12.4% MoM</p>
+            </article>
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">ARR</p>
+              <p class="kpi__value">$3.4M</p>
+              <p class="kpi__delta"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +9.1% YoY</p>
+            </article>
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">ARPU</p>
+              <p class="kpi__value">$154</p>
+              <p class="kpi__delta">Pro + Growth mix</p>
+            </article>
+            <article class="kpi neo-card" data-aos="fade-up">
+              <p class="kpi__label">Churn</p>
+              <p class="kpi__value">1.8%</p>
+              <p class="kpi__delta" style="color: var(--signal-2);">Within target</p>
+            </article>
+          </div>
+
+          <section class="dash-panel neo-card" aria-labelledby="revenue-trend-title" data-aos="fade-up">
+            <div class="dash-panel__head">
+              <h3 id="revenue-trend-title">Monthly recurring revenue</h3>
+              <span class="badge badge--success">Live</span>
+            </div>
+            <div class="chart-placeholder" role="img" aria-label="Revenue bar chart placeholder"></div>
+          </section>
+
+          <section class="dash-panel neo-card" aria-labelledby="revenue-plans" data-aos="fade-up">
+            <div class="dash-panel__head">
+              <h3 id="revenue-plans">Plan breakdown</h3>
+            </div>
+            <ul class="info-list">
+              <li>
+                <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                <div>
+                  <strong>Growth — 42%</strong>
+                  <p class="muted mb-0" style="font-size: 0.9rem;">$119K MRR · 772 seats</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                <div>
+                  <strong>Pro — 31%</strong>
+                  <p class="muted mb-0" style="font-size: 0.9rem;">$88K MRR · 1,240 seats</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-building" aria-hidden="true"></i>
+                <div>
+                  <strong>Enterprise — 27%</strong>
+                  <p class="muted mb-0" style="font-size: 0.9rem;">$77K MRR · 48 accounts</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- Content -->
+        <section class="dash-view" data-dash-view="content" hidden aria-labelledby="admin-content-heading">
+          <div>
+            <h1 id="admin-content-heading" class="mt-0" style="font-size: 1.65rem;">Content</h1>
+            <p class="muted mb-0">Publish blog posts, case studies, and marketing pages.</p>
+          </div>
+
+          <section class="dash-panel neo-card" aria-labelledby="content-queue" data-aos="fade-up">
+            <div class="dash-panel__head">
+              <h3 id="content-queue">Editorial queue</h3>
+             
+            </div>
+            <ul class="info-list">
+              <li>
+                <i class="fa-solid fa-pen" aria-hidden="true"></i>
+                <div>
+                  <strong>Observability that follows the deploy</strong>
+                  <p class="muted mb-0" style="font-size: 0.9rem;">Draft · scheduled for review</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-newspaper" aria-hidden="true"></i>
+                <div>
+                  <strong>Atlas CRM customer story</strong>
+                  <p class="muted mb-0" style="font-size: 0.9rem;">In review · Priya Shah</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-image" aria-hidden="true"></i>
+                <div>
+                  <strong>Hero upload — case study</strong>
+                  <p class="muted mb-0" style="font-size: 0.9rem;">Awaiting alt-text check</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="dash-panel neo-card" aria-labelledby="published-posts" data-aos="fade-up">
+            <div class="dash-panel__head">
+              <h3 id="published-posts">Recently published</h3>
+              <a href="404.html" class="btn btn--secondary" style="min-height: 40px; padding: 0.5rem 1rem;">View blog</a>
+            </div>
+            <ul class="activity-feed">
+              <li><span><strong>Signal API launch notes</strong> <span class="muted">· Mar 4</span></span></li>
+              <li><span><strong>How teams cut MTTR by 40%</strong> <span class="muted">· Feb 21</span></span></li>
+              <li><span><strong>Platform roadmap Q1</strong> <span class="muted">· Feb 8</span></span></li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- Moderation -->
+        <section class="dash-view" data-dash-view="moderation" hidden aria-labelledby="admin-mod-heading">
+          <div>
+            <h1 id="admin-mod-heading" class="mt-0" style="font-size: 1.65rem;">Moderation</h1>
+            <p class="muted mb-0">Review flagged comments, uploads, and account reports.</p>
+          </div>
+
+          <section class="dash-panel neo-card" aria-labelledby="mod-queue" data-aos="fade-up">
+            <div class="dash-panel__head">
+              <h3 id="mod-queue">Open queue</h3>
+              <span class="badge badge--warn">5 pending</span>
+            </div>
+            <ul class="info-list">
+              <li>
+                <i class="fa-solid fa-comment-dots" aria-hidden="true"></i>
+                <div>
+                  <strong>Blog comment #4412</strong>
+                  <p class="muted mb-0" style="font-size: 0.9rem;">Flagged for spam ·</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-image" aria-hidden="true"></i>
+                <div>
+                  <strong>Hero upload — case study</strong>
+                  <p class="muted mb-0" style="font-size: 0.9rem;">Awaiting alt-text check · </p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-user-slash" aria-hidden="true"></i>
+                <div>
+                  <strong>Account report</strong>
+                  <p class="muted mb-0" style="font-size: 0.9rem;">2 community reports · priority medium · </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- Settings -->
+        <section class="dash-view" data-dash-view="settings" hidden aria-labelledby="admin-settings-heading">
+          <div>
+            <h1 id="admin-settings-heading" class="mt-0" style="font-size: 1.65rem;">Settings</h1>
+            <p class="muted mb-0">Configure site identity, support contacts, and maintenance mode.</p>
+          </div>
+
+          <section class="dash-panel neo-card" aria-labelledby="settings-form-title" data-aos="fade-up">
+            <div class="dash-panel__head">
+              <h3 id="settings-form-title">Platform settings</h3>
+            </div>
+            <form class="form" data-validate data-success-redirect="404.html" action="404.html" method="post">
+              <div class="field">
+                <label for="admin-site-name">Site name</label>
+                <input type="text" id="admin-site-name" name="site_name" value="Stackly Technology">
+              </div>
+              <div class="field">
+                <label for="admin-support-email">Support email</label>
+                <input type="email" id="admin-support-email" name="support_email" value="hello@stackly.io">
+              </div>
+              <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem;">
+                <input type="checkbox" name="maintenance" style="width: auto; min-height: auto;">
+                Enable maintenance mode (demo)
+              </label>
+              <button type="submit" class="btn btn--secondary">Save changes</button>
+            </form>
+          </section>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js?v=aos-site-1" defer></script>
+</body>
+</html>

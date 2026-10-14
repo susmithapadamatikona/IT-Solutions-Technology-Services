@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Technology blog — product, engineering, and cloud insights for SaaS teams.">
+  <title>Blog | Stackly Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css?v=navy-teal-1">
+  <link rel="stylesheet" href="css/neumorphism.css?v=3">
+</head>
+<body>
+    <div class="preloader" role="status" aria-live="polite" aria-label="Loading">
+    <div class="preloader__inner">
+      <div class="preloader__mark">
+        <div class="preloader__orbit" aria-hidden="true"></div>
+        <span class="themed-logo" aria-hidden="true"></span>
+      </div>
+      <div class="preloader__bar" aria-hidden="true"><span></span></div>
+    </div>
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="site-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html"><span class="brand__logo themed-logo" role="img" aria-label="Stackly Technology"></span></a>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link" href="services.html">Services</a>
+        <a class="nav__link" href="projects.html">Projects</a>
+        <a class="nav__link" href="blogs.html">Blog</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+        <div class="nav__actions nav__actions--mobile">
+          <a class="btn btn--secondary" href="login.html">Login</a>
+          <a class="btn btn--primary" href="register.html">Register</a>
+        </div>
+      </nav>
+      <div class="nav__actions nav__actions--desktop">
+        <a class="btn btn--secondary" href="login.html">Login</a>
+        <a class="btn btn--primary" href="register.html">Register</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="blog-hero-title">
+      <div class="hero__media">
+        <img src="Images/blog-1.webp" alt="Stackly Technology blog — insights for platform teams" width="1920" height="1080" fetchpriority="high">
+      </div>
+      <div class="container hero__content" data-aos="fade-up">
+        <p class="hero__brand">Stackly<span>Technology</span></p>
+        <h1 id="blog-hero-title" class="hero__title">Insights for platform-minded teams.</h1>
+        <p class="hero__text">Product strategy, engineering craft, and cloud operations from the Stackly Technology crew.</p>
+        <div class="btn-group">
+          <a class="btn btn--primary" href="404.html">Browse topics <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn--ghost" href="404.html">Get the Signal brief</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark section--tight" data-aos="fade-up" aria-label="Blog stats">
+      <div class="container">
+        <div class="metrics-band">
+          <div class="metric"><strong>120+</strong><span class="muted">Articles published</span></div>
+          <div class="metric"><strong>48k</strong><span class="muted">Monthly readers</span></div>
+          <div class="metric"><strong>6 min</strong><span class="muted">Avg. read time</span></div>
+          <div class="metric"><strong>Weekly</strong><span class="muted">Signal brief drops</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight blog-featured" data-aos="fade-up" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section__head blog-featured__head" data-aos="fade-up">
+          <div>
+            <p class="section__eyebrow"><i class="fa-solid fa-star" aria-hidden="true"></i> Featured</p>
+            <h2 id="featured-title" class="section__title">Editor’s pick this month</h2>
+          </div>
+          <span class="blog-featured__issue mono">Signal · Issue 10</span>
+        </div>
+        <article class="featured-spot">
+          <a class="featured-spot__media" href="blog-single.html?post=progressive-delivery" tabindex="-1" aria-hidden="true">
+            <img src="Images/blog-1.webp" alt="" width="1400" height="780" loading="lazy">
+          </a>
+          <div class="featured-spot__veil" aria-hidden="true"></div>
+          <div class="featured-spot__body">
+            <div class="featured-spot__tags">
+              <span class="chip">Product</span>
+              <span class="featured-spot__label mono">Editor’s pick</span>
+            </div>
+            <h3 class="featured-spot__title"><a href="blog-single.html?post=progressive-delivery">Designing progressive delivery at scale</a></h3>
+            <p class="featured-spot__excerpt">How Graphite Signal teams roll out features without sacrificing reliability—or the error budget. Flags, canaries, and rollout ownership in one playbook.</p>
+            <div class="featured-spot__meta">
+              <div class="featured-spot__author">
+                <img src="Images/team-2.webp" alt="" width="48" height="48" loading="lazy">
+                <div>
+                  <strong>Maya Chen</strong>
+                  <span>CTO · Oct 2, 2026</span>
+                </div>
+              </div>
+              <span class="featured-spot__read mono">6 min read</span>
+            </div>
+            <a class="btn btn--primary" href="404.html">Read the article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section blog-topics" data-aos="fade-up" aria-labelledby="topics-title">
+      <div class="container">
+        <div class="topics-board">
+          <header class="topics-board__intro">
+            <p class="section__eyebrow"><i class="fa-solid fa-folder-open" aria-hidden="true"></i> Topics</p>
+            <h2 id="topics-title" class="section__title">Browse by signal</h2>
+            <p class="section__lead">Deep dives grouped the way platform teams think—product bets, engineering craft, and cloud spend.</p>
+            <p class="topics-board__hint mono">Select a channel to filter the archive</p>
+          </header>
+          <div class="topics-board__channels" role="group" aria-label="Browse topics">
+            <a class="topic-channel topic-channel--product" href="404.html">
+              <span class="topic-channel__index mono" aria-hidden="true">01</span>
+              <span class="topic-channel__icon" aria-hidden="true"><i class="fa-solid fa-cube"></i></span>
+              <span class="topic-channel__copy">
+                <span class="topic-channel__title">Product</span>
+                <span class="topic-channel__desc">Roadmaps, ROI, and customer-facing reliability for platform leads.</span>
+              </span>
+              <span class="topic-channel__meta">
+                <span class="topic-channel__count mono">32</span>
+                <span class="topic-channel__label">essays</span>
+              </span>
+              <span class="topic-channel__go" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a class="topic-channel topic-channel--eng" href="404.html">
+              <span class="topic-channel__index mono" aria-hidden="true">02</span>
+              <span class="topic-channel__icon" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
+              <span class="topic-channel__copy">
+                <span class="topic-channel__title">Engineering</span>
+                <span class="topic-channel__desc">Trunk-based delivery, observability, APIs, and preview environments.</span>
+              </span>
+              <span class="topic-channel__meta">
+                <span class="topic-channel__count mono">41</span>
+                <span class="topic-channel__label">essays</span>
+              </span>
+              <span class="topic-channel__go" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a class="topic-channel topic-channel--cloud" href="404.html">
+              <span class="topic-channel__index mono" aria-hidden="true">03</span>
+              <span class="topic-channel__icon" aria-hidden="true"><i class="fa-solid fa-cloud"></i></span>
+              <span class="topic-channel__copy">
+                <span class="topic-channel__title">Cloud</span>
+                <span class="topic-channel__desc">FinOps guardrails, right-sizing, and game-day resilience patterns.</span>
+              </span>
+              <span class="topic-channel__meta">
+                <span class="topic-channel__count mono">28</span>
+                <span class="topic-channel__label">essays</span>
+              </span>
+              <span class="topic-channel__go" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a class="topic-channel topic-channel--trust" href="404.html">
+              <span class="topic-channel__index mono" aria-hidden="true">04</span>
+              <span class="topic-channel__icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></span>
+              <span class="topic-channel__copy">
+                <span class="topic-channel__title">Trust</span>
+                <span class="topic-channel__desc">Secure SDLC, compliance evidence, and policies that travel with deploys.</span>
+              </span>
+              <span class="topic-channel__meta">
+                <span class="topic-channel__count mono">19</span>
+                <span class="topic-channel__label">essays</span>
+              </span>
+              <span class="topic-channel__go" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight blog-all" id="all-posts" data-aos="fade-up" aria-labelledby="all-posts-title">
+      <div class="container">
+        <div class="section__head" data-aos="fade-up">
+          <div>
+            <p class="section__eyebrow"><i class="fa-solid fa-newspaper" aria-hidden="true"></i> All posts</p>
+            <h2 id="all-posts-title" class="section__title">Latest from the Stackly crew</h2>
+            <p class="section__lead">Filter by signal—each article opens with its own cover and story.</p>
+          </div>
+        </div>
+       
+
+        <div class="blog-grid blog-grid--signal" data-blog-grid data-per-page="6">
+          <article class="blog-card blog-card--signal neo-card" data-category="product" data-aos="fade-up">
+            <a class="blog-card__media" href="404.html"><img src="Images/blog-1.webp" alt="Progressive delivery at scale" width="640" height="360" loading="lazy"></a>
+            <div class="blog-card__body">
+              <div class="blog-card__tags"><span class="chip">Product</span><span class="blog-card__read mono">6 min</span></div>
+              <h3><a href="404.html">Designing progressive delivery at scale</a></h3>
+              <p>Feature flags and canaries that match your risk appetite.</p>
+              <p class="blog-card__meta">Oct 2, 2026</p>
+            </div>
+          </article>
+          <article class="blog-card blog-card--signal neo-card" data-category="engineering" data-aos="fade-up">
+            <a class="blog-card__media" href="404.html"><img src="Images/blog-2.webp" alt="Observability tied to deploys" width="640" height="360" loading="lazy"></a>
+            <div class="blog-card__body">
+              <div class="blog-card__tags"><span class="chip chip--teal">Engineering</span><span class="blog-card__read mono">8 min</span></div>
+              <h3><a href="404.html">Observability that follows the deploy</a></h3>
+              <p>Link traces to release metadata automatically.</p>
+              <p class="blog-card__meta">Sep 18, 2026</p>
+            </div>
+          </article>
+          <article class="blog-card blog-card--signal neo-card" data-category="cloud" data-aos="fade-up">
+            <a class="blog-card__media" href="404.html"><img src="Images/blog-3.webp" alt="FinOps guardrails" width="640" height="360" loading="lazy"></a>
+            <div class="blog-card__body">
+              <div class="blog-card__tags"><span class="chip chip--amber">Cloud</span><span class="blog-card__read mono">5 min</span></div>
+              <h3><a href="404.html">FinOps guardrails for multi-cloud SaaS</a></h3>
+              <p>Keep spend predictable as workloads grow.</p>
+              <p class="blog-card__meta">Sep 4, 2026</p>
+            </div>
+          </article>
+          <article class="blog-card blog-card--signal neo-card" data-category="engineering" data-aos="fade-up">
+            <a class="blog-card__media" href="404.html"><img src="Images/blog-4.webp" alt="Trunk-based development guide" width="640" height="360" loading="lazy"></a>
+            <div class="blog-card__body">
+              <div class="blog-card__tags"><span class="chip chip--teal">Engineering</span><span class="blog-card__read mono">7 min</span></div>
+              <h3><a href="404.html">Trunk-based development in practice</a></h3>
+              <p>Short-lived branches without sacrificing review quality.</p>
+              <p class="blog-card__meta">Aug 22, 2026</p>
+            </div>
+          </article>
+          <article class="blog-card blog-card--signal neo-card" data-category="product" data-aos="fade-up">
+            <a class="blog-card__media" href="404.html"><img src="Images/blog-5.webp" alt="Platform ROI metrics" width="640" height="360" loading="lazy"></a>
+            <div class="blog-card__body">
+              <div class="blog-card__tags"><span class="chip">Product</span><span class="blog-card__read mono">7 min</span></div>
+              <h3><a href="404.html">Measuring platform team ROI</a></h3>
+              <p>Metrics executives actually care about.</p>
+              <p class="blog-card__meta">Aug 9, 2026</p>
+            </div>
+          </article>
+          <article class="blog-card blog-card--signal neo-card" data-category="cloud" data-aos="fade-up">
+            <a class="blog-card__media" href="404.html"><img src="Images/blog-6.webp" alt="Kubernetes cost optimization" width="640" height="360" loading="lazy"></a>
+            <div class="blog-card__body">
+              <div class="blog-card__tags"><span class="chip chip--amber">Cloud</span><span class="blog-card__read mono">6 min</span></div>
+              <h3><a href="404.html">Right-sizing Kubernetes without surprises</a></h3>
+              <p>Autoscaling policies that respect your budget.</p>
+              <p class="blog-card__meta">Jul 28, 2026</p>
+            </div>
+          </article>
+          <article class="blog-card blog-card--signal neo-card" data-category="product" data-aos="fade-up">
+            <a class="blog-card__media" href="404.html"><img src="Images/signal-shipping.webp" alt="Customer-facing SLOs" width="640" height="360" loading="lazy"></a>
+            <div class="blog-card__body">
+              <div class="blog-card__tags"><span class="chip">Product</span><span class="blog-card__read mono">5 min</span></div>
+              <h3><a href="404.html">Customer-facing SLOs that build trust</a></h3>
+              <p>Translate reliability into language buyers understand.</p>
+              <p class="blog-card__meta">Jul 14, 2026</p>
+            </div>
+          </article>
+          <article class="blog-card blog-card--signal neo-card" data-category="engineering" data-aos="fade-up">
+            <a class="blog-card__media" href="404.html"><img src="Images/signal-observability.webp" alt="Preview environments" width="640" height="360" loading="lazy"></a>
+            <div class="blog-card__body">
+              <div class="blog-card__tags"><span class="chip chip--teal">Engineering</span><span class="blog-card__read mono">6 min</span></div>
+              <h3><a href="404.html">Preview environments on every PR</a></h3>
+              <p>Ephemeral stacks with realistic data boundaries.</p>
+              <p class="blog-card__meta">Jun 30, 2026</p>
+            </div>
+          </article>
+          <article class="blog-card blog-card--signal neo-card" data-category="cloud" data-aos="fade-up">
+            <a class="blog-card__media" href="404.html"><img src="Images/signal-cloudops.webp" alt="Disaster recovery drills" width="640" height="360" loading="lazy"></a>
+            <div class="blog-card__body">
+              <div class="blog-card__tags"><span class="chip chip--amber">Cloud</span><span class="blog-card__read mono">9 min</span></div>
+              <h3><a href="404.html">Game-day drills that actually stick</a></h3>
+              <p>Runbooks your team will use when it matters.</p>
+              <p class="blog-card__meta">Jun 12, 2026</p>
+            </div>
+          </article>
+          <article class="blog-card blog-card--signal neo-card" data-category="engineering" data-aos="fade-up">
+            <a class="blog-card__media" href="404.html"><img src="Images/process-flow.webp" alt="API design for internal platforms" width="640" height="360" loading="lazy"></a>
+            <div class="blog-card__body">
+              <div class="blog-card__tags"><span class="chip chip--teal">Engineering</span><span class="blog-card__read mono">8 min</span></div>
+              <h3><a href="404.html">API design for internal platforms</a></h3>
+              <p>Consistency patterns for developer portals.</p>
+              <p class="blog-card__meta">May 25, 2026</p>
+            </div>
+          </article>
+          <article class="blog-card blog-card--signal neo-card" data-category="product" data-aos="fade-up">
+            <a class="blog-card__media" href="404.html"><img src="Images/office-collab.webp" alt="Roadmap alignment" width="640" height="360" loading="lazy"></a>
+            <div class="blog-card__body">
+              <div class="blog-card__tags"><span class="chip">Product</span><span class="blog-card__read mono">6 min</span></div>
+              <h3><a href="404.html">Aligning platform roadmaps with product bets</a></h3>
+              <p>Quarterly planning without siloed backlogs.</p>
+              <p class="blog-card__meta">May 8, 2026</p>
+            </div>
+          </article>
+          <article class="blog-card blog-card--signal neo-card" data-category="cloud" data-aos="fade-up">
+            <a class="blog-card__media" href="404.html"><img src="Images/feature-cloud.webp" alt="Carbon-aware scheduling" width="640" height="360" loading="lazy"></a>
+            <div class="blog-card__body">
+              <div class="blog-card__tags"><span class="chip chip--amber">Cloud</span><span class="blog-card__read mono">5 min</span></div>
+              <h3><a href="404.html">Carbon-aware batch scheduling</a></h3>
+              <p>Shift non-urgent jobs to greener windows.</p>
+              <p class="blog-card__meta">Apr 19, 2026</p>
+            </div>
+          </article>
+        </div>
+
+        <nav class="pagination" data-pagination aria-label="Blog pagination"></nav>
+      </div>
+    </section>
+
+  
+
+    <section class="section section--tight" data-aos="fade-up" aria-labelledby="popular-title">
+      <div class="container">
+        <div class="section__head" data-aos="fade-up">
+          <div>
+            <p class="section__eyebrow"><i class="fa-solid fa-fire" aria-hidden="true"></i> Trending</p>
+            <h2 id="popular-title" class="section__title">Most read this quarter</h2>
+            <p class="section__lead">The pieces platform leads keep sharing with their teams.</p>
+          </div>
+          <a class="btn btn--secondary" href="404.html">Browse topics</a>
+        </div>
+        <div class="blog-grid blog-grid--nest">
+          <article class="blog-card blog-card--nest neo-card" data-aos="fade-up">
+            <a class="blog-card__media" href="blog-single.html?post=observability-deploy">
+              <img src="Images/blog-2.webp" alt="Observability that follows the deploy" width="640" height="360" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <div class="blog-card__panel">
+                <span class="chip chip--teal">Engineering</span>
+                <h3><a href="blog-single.html?post=observability-deploy">Observability that follows the deploy</a></h3>
+                <p>Correlate traces with release metadata for faster root-cause analysis.</p>
+                <p class="blog-card__meta">Sep 18, 2026 · 8 min read</p>
+              </div>
+            </div>
+          </article>
+          <article class="blog-card blog-card--nest neo-card" data-aos="fade-up">
+            <a class="blog-card__media" href="blog-single.html?post=finops-guardrails">
+              <img src="Images/blog-3.webp" alt="FinOps guardrails for multi-cloud SaaS" width="640" height="360" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <div class="blog-card__panel">
+                <span class="chip chip--amber">Cloud</span>
+                <h3><a href="blog-single.html?post=finops-guardrails">FinOps guardrails for multi-cloud SaaS</a></h3>
+                <p>Policy-as-code patterns to keep spend predictable as you scale.</p>
+                <p class="blog-card__meta">Sep 4, 2026 · 5 min read</p>
+              </div>
+            </div>
+          </article>
+          <article class="blog-card blog-card--nest neo-card" data-aos="fade-up">
+            <a class="blog-card__media" href="blog-single.html?post=platform-roi">
+              <img src="Images/blog-5.webp" alt="Measuring platform team ROI" width="640" height="360" loading="lazy">
+            </a>
+            <div class="blog-card__body">
+              <div class="blog-card__panel">
+                <span class="chip">Product</span>
+                <h3><a href="blog-single.html?post=platform-roi">Measuring platform team ROI</a></h3>
+                <p>Metrics executives actually care about—without vanity dashboards.</p>
+                <p class="blog-card__meta">Aug 9, 2026 · 7 min read</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" data-aos="fade-up" aria-labelledby="authors-title">
+      <div class="container">
+        <div class="section__head" data-aos="fade-up">
+          <div>
+            <p class="section__eyebrow"><i class="fa-solid fa-pen" aria-hidden="true"></i> Contributors</p>
+            <h2 id="authors-title" class="section__title">Who writes for Stackly</h2>
+            <p class="section__lead">Field notes from the people shipping Graphite Signal—and the customers running it.</p>
+          </div>
+        </div>
+        <div class="team-grid">
+          <article class="team-card neo-card" data-aos="fade-up">
+            <img src="Images/team-2.webp" alt="Maya Chen" width="400" height="400" loading="lazy">
+            <div class="team-card__body"><h3>Maya Chen</h3><p class="muted mb-0">CTO · Delivery &amp; product</p></div>
+          </article>
+          <article class="team-card neo-card" data-aos="fade-up">
+            <img src="Images/team-3.webp" alt="Priya Nair" width="400" height="400" loading="lazy">
+            <div class="team-card__body"><h3>Priya Nair</h3><p class="muted mb-0">VP Platform · Engineering</p></div>
+          </article>
+          <article class="team-card neo-card" data-aos="fade-up">
+            <img src="Images/team-1.webp" alt="Alex Rivera" width="400" height="400" loading="lazy">
+            <div class="team-card__body"><h3>Alex Rivera</h3><p class="muted mb-0">CEO · Strategy &amp; culture</p></div>
+          </article>
+          <article class="team-card neo-card" data-aos="fade-up">
+            <img src="Images/team-4.webp" alt="Jordan Ellis" width="400" height="400" loading="lazy">
+            <div class="team-card__body"><h3>Jordan Ellis</h3><p class="muted mb-0">Customer Success · Cloud</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" data-aos="fade-up" aria-labelledby="editorial-title">
+      <div class="container feature-split">
+        <div>
+          <p class="section__eyebrow"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Editorial</p>
+          <h2 id="editorial-title" class="section__title">How we write the Signal</h2>
+          <p class="section__lead">Every post starts from a real customer problem or an internal incident—not a content calendar checkbox.</p>
+          <ul class="info-list">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Field-tested with Graphite Signal customers before publish.</span></li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Reviewed by platform, SRE, and product leads together.</span></li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Practical steps first; theory only when it earns its place.</span></li>
+          </ul>
+          <a class="btn btn--secondary" href="404.html">Pitch a guest post</a>
+        </div>
+        <div class="feature-split__media" data-aos="zoom-in">
+          <img src="Images/office-collab.webp" alt="Stackly team collaborating on editorial drafts" width="800" height="520" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" data-aos="fade-up" aria-labelledby="reader-title">
+      <div class="container">
+        <div class="section__head" data-aos="fade-up">
+          <div>
+            <p class="section__eyebrow"><i class="fa-solid fa-quote-left" aria-hidden="true"></i> Readers</p>
+            <h2 id="reader-title" class="section__title">What teams say about the blog</h2>
+            <p class="section__lead">Feedback from platform leads who use Stackly writing in their own rituals.</p>
+          </div>
+        </div>
+        <div class="reviews-grid">
+          <article class="review-card neo-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="review-card__top">
+              <div class="stars" aria-label="Rated 5 out of 5">
+                <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+              </div>
+              <span class="review-card__score">5.0</span>
+            </div>
+            <blockquote>
+              <p>“We run the progressive delivery series in every new-hire platform onboarding.”</p>
+            </blockquote>
+            <p class="review-card__aside">NovaStack made Stackly posts required reading for platform guild kickoff.</p>
+            <footer class="review-card__meta">
+              <img src="Images/team-1.webp" alt="Maya Chen" width="96" height="96" loading="lazy">
+              <div>
+                <p class="review-card__name">Maya Chen</p>
+                <p class="review-card__role">VP Engineering · NovaStack</p>
+              </div>
+            </footer>
+          </article>
+          <article class="review-card review-card--featured neo-card neo-card--dark" data-aos="fade-up" data-aos-delay="80">
+            <div class="review-card__top">
+              <div class="stars" aria-label="Rated 5 out of 5">
+                <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+              </div>
+              <span class="review-card__score">5.0</span>
+            </div>
+            <blockquote>
+              <p>“The FinOps pieces finally gave finance and engineering a shared vocabulary.”</p>
+            </blockquote>
+            <p class="review-card__aside">Cloudline used the Signal brief in quarterly spend reviews.</p>
+            <footer class="review-card__meta">
+              <img src="Images/team-2.webp" alt="Jordan Ellis" width="96" height="96" loading="lazy">
+              <div>
+                <p class="review-card__name">Jordan Ellis</p>
+                <p class="review-card__role">Head of Platform · Cloudline</p>
+              </div>
+            </footer>
+          </article>
+          <article class="review-card neo-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="review-card__top">
+              <div class="stars" aria-label="Rated 4.5 out of 5">
+                <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+              </div>
+              <span class="review-card__score">4.5</span>
+            </div>
+            <blockquote>
+              <p>“Short enough for a standup, deep enough for an RFC—rare for vendor blogs.”</p>
+            </blockquote>
+            <p class="review-card__aside">Vertex SRE cites Stackly posts in their internal reliability wiki.</p>
+            <footer class="review-card__meta">
+              <img src="Images/team-3.webp" alt="Priya Nair" width="96" height="96" loading="lazy">
+              <div>
+                <p class="review-card__name">Priya Nair</p>
+                <p class="review-card__role">Director of SRE · Vertex SaaS</p>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--faq" data-aos="fade-up" aria-labelledby="blog-faq-title">
+      <div class="container">
+        <div class="faq-layout">
+          <div class="faq-layout__intro" data-aos="fade-up">
+            <p class="section__eyebrow"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> FAQ</p>
+            <h2 id="blog-faq-title" class="section__title">About the Stackly blog</h2>
+            <p class="section__lead">Syndication, guest posts, and how often we publish new Signal notes.</p>
+            <a class="btn btn--secondary" href="404.html">Ask the editorial team</a>
+          </div>
+          <div class="faq faq--shell">
+            <div class="faq__item neo-card" data-aos="fade-up">
+              <button class="faq__question" type="button">How often do you publish?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+              <div class="faq__answer"><p>We ship new long-form posts every other week, plus a short Signal brief every Monday for newsletter subscribers.</p></div>
+            </div>
+            <div class="faq__item neo-card" data-aos="fade-up">
+              <button class="faq__question" type="button">Can I republish an article?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+              <div class="faq__answer"><p>Yes with attribution and a canonical link back to Stackly. Email hello@stackly.tech for syndication approval on paid or gated channels.</p></div>
+            </div>
+            <div class="faq__item neo-card" data-aos="fade-up">
+              <button class="faq__question" type="button">Do you accept guest posts?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+              <div class="faq__answer"><p>We welcome practitioners from customer and partner teams. Pitch a concrete problem and outcome—not a product pitch—via the contact form.</p></div>
+            </div>
+            <div class="faq__item neo-card" data-aos="fade-up">
+              <button class="faq__question" type="button">Is there an RSS feed?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+              <div class="faq__answer"><p>Subscribe to the Signal brief for email delivery, or follow Stackly on LinkedIn and GitHub for post announcements as they go live.</p></div>
+            </div>
+            <div class="faq__item neo-card" data-aos="fade-up">
+              <button class="faq__question" type="button">Can I suggest a topic for a future article?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+              <div class="faq__answer"><p>Yes. Send the editorial team a note through our <a href="404.html">contact form</a> with the challenge or question you would like us to cover.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section section--tight">
+      <div class="container" data-aos="zoom-in">
+        <div class="cta-band cta-band--sharp" data-aos="zoom-in">
+          <div class="cta-band__bg" aria-hidden="true"><img src="Images/cta-signal.webp?v=sharp" alt="" width="1920" height="1080" loading="lazy"></div>
+          <div class="cta-band__content">
+            <p class="cta-band__eyebrow">Go deeper</p>
+            <h2 class="section__title">Prefer a live conversation?</h2>
+            <p class="cta-band__text">Book a consult with a Stackly architect, or explore how we partner with platform teams.</p>
+            <div class="btn-group">
+              <a class="btn btn--teal" href="404.html">Talk to us</a>
+              <a class="btn btn--ghost" href="404.html">Explore services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--clean">
+    <div class="container">
+      <div class="footer-clean__grid">
+        <div class="footer-clean__brand" data-aos="fade-up">
+          <a class="brand" href="index.html" aria-label="Stackly home">
+            <span class="brand__logo themed-logo" role="img" aria-label="Stackly Technology"></span>
+          </a>
+          <p>Practical IT solutions for a stronger business. We help you build, secure, and scale your digital foundation.</p>
+          <a class="footer-clean__cta" href="contact.html">Let&rsquo;s talk about your project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <nav class="social-links social-links--footer" aria-label="Social media">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn (opens in a new tab)"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub (opens in a new tab)"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit X (opens in a new tab)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram (opens in a new tab)"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          </nav>
+        </div>
+        <nav class="footer-clean__column" aria-labelledby="footer-explore-title" data-aos="fade-up">
+          <h2 id="footer-explore-title">Explore</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-clean__column" aria-labelledby="footer-services-title" data-aos="fade-up">
+          <h2 id="footer-services-title">Our expertise</h2>
+          <ul>
+            <li><a href="services.html">Platform engineering</a></li>
+            <li><a href="services.html">Cloud operations</a></li>
+            <li><a href="services.html">Security &amp; compliance</a></li>
+            <li><a href="services.html">Monitoring &amp; reliability</a></li>
+            <li><a href="services.html#software-development">Software development</a></li>
+            <li><a href="services.html#it-support">IT support &amp; maintenance</a></li>
+          </ul>
+        </nav>
+        <div class="footer-clean__column" data-aos="fade-up">
+          <h2>Get in touch</h2>
+          <address class="footer-clean__contact">
+            <a href="mailto:hello@stackly.tech"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>hello@stackly.tech</span></a>
+            <a href="tel:+15125550142"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>+1 (512) 555-0142</span></a>
+            <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>1200 Signal Way, Suite 400<br>Austin, TX 78701</span></p>
+            <a href="contact.html"><i class="fa-solid fa-comments" aria-hidden="true"></i><span>Contact our team</span></a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-clean__bottom" data-aos="fade-up">
+        <p>&copy; <span data-year></span> Stackly Technology. All rights reserved.</p>
+        <nav aria-label="Footer account links">
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js?v=aos-site-1" defer></script>
+</body>
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Stackly IT solutions: software development, cloud infrastructure, cybersecurity, automation, and technical support.">
+  <title>Services | Stackly Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css?v=navy-teal-1">
+  <link rel="stylesheet" href="css/neumorphism.css?v=3">
+</head>
+<body>
+    <div class="preloader" role="status" aria-live="polite" aria-label="Loading">
+    <div class="preloader__inner">
+      <div class="preloader__mark">
+        <div class="preloader__orbit" aria-hidden="true"></div>
+        <span class="themed-logo" aria-hidden="true"></span>
+      </div>
+      <div class="preloader__bar" aria-hidden="true"><span></span></div>
+    </div>
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="site-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html"><span class="brand__logo themed-logo" role="img" aria-label="Stackly Technology"></span></a>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link" href="services.html">Services</a>
+        <a class="nav__link" href="projects.html">Projects</a>
+        <a class="nav__link" href="blogs.html">Blog</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+        <div class="nav__actions nav__actions--mobile">
+          <a class="btn btn--secondary" href="login.html">Login</a>
+          <a class="btn btn--primary" href="register.html">Register</a>
+        </div>
+      </nav>
+      <div class="nav__actions nav__actions--desktop">
+        <a class="btn btn--secondary" href="login.html">Login</a>
+        <a class="btn btn--primary" href="register.html">Register</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="services-hero-title">
+      <div class="hero__media">
+        <img src="Images/feature-cloud.webp" alt="Stackly cloud and platform services overview" width="1920" height="1080" fetchpriority="high">
+      </div>
+      <div class="container hero__content" data-aos="fade-up">
+        <p class="hero__brand">Stackly<span>Technology</span></p>
+        <h1 id="services-hero-title" class="hero__title">IT solutions that move your business forward.</h1>
+        <p class="hero__text">Build better software, modernize your infrastructure, and protect your digital assets. Stackly brings practical expertise to every stage of your technology journey.</p>
+        <div class="btn-group">
+          <a class="btn btn--primary" href="contact.html">Book a consultation <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn--ghost" href="projects.html">Explore our projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark section--tight" data-aos="fade-up" aria-label="Service outcomes">
+      <div class="container">
+        <div class="metrics-band">
+          <div class="metric"><strong>Build</strong><span class="muted">Custom software solutions</span></div>
+          <div class="metric"><strong>Scale</strong><span class="muted">Flexible cloud infrastructure</span></div>
+          <div class="metric"><strong>Secure</strong><span class="muted">Protection for systems and data</span></div>
+          <div class="metric"><strong>Support</strong><span class="muted">Ongoing technical assistance</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" data-aos="fade-up">
+      <div class="container">
+        <article id="software-development" class="feature-split feature-split--service" style="margin-bottom: 3.5rem;">
+          <div class="feature-split__media" data-aos="zoom-in">
+            <img src="Images/service-platform.webp" alt="Platform engineering service" width="800" height="520" loading="lazy">
+          </div>
+          <div class="feature-split__copy" data-aos="fade-up">
+            <span class="chip">Core service</span>
+            <h2>Software &amp; platform engineering</h2>
+            <p class="muted">Develop applications, internal tools, and connected systems that simplify daily work. We help you plan, build, and maintain software around your business needs.</p>
+            <ul class="info-list">
+              <li><i class="fa-solid fa-code" aria-hidden="true"></i><span>Custom web applications &amp; business tools</span></li>
+              <li><i class="fa-solid fa-rocket" aria-hidden="true"></i><span>Automated build, test &amp; release workflows</span></li>
+              <li><i class="fa-solid fa-plug" aria-hidden="true"></i><span>API development &amp; system integration</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="feature-split feature-split--service feature-split--reverse" style="margin-bottom: 3.5rem;">
+          <div class="feature-split__media" data-aos="zoom-in">
+            <img src="Images/service-ops.webp" alt="Cloud operations service" width="800" height="520" loading="lazy">
+          </div>
+          <div class="feature-split__copy" data-aos="fade-up">
+            <span class="chip chip--teal">Operations</span>
+            <h2>Cloud &amp; infrastructure services</h2>
+            <p class="muted">Move to the cloud with a clear plan and infrastructure built for your workloads. Manage environments, improve reliability, and understand resource costs.</p>
+            <ul class="info-list">
+              <li><i class="fa-solid fa-bell" aria-hidden="true"></i><span>Cloud migration &amp; environment setup</span></li>
+              <li><i class="fa-solid fa-life-ring" aria-hidden="true"></i><span>Monitoring, backups &amp; recovery planning</span></li>
+              <li><i class="fa-solid fa-server" aria-hidden="true"></i><span>Resource optimization &amp; scalability reviews</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="feature-split feature-split--service">
+          <div class="feature-split__media" data-aos="zoom-in">
+            <img src="Images/service-security.webp" alt="Security and compliance service" width="800" height="520" loading="lazy">
+          </div>
+          <div class="feature-split__copy" data-aos="fade-up">
+            <span class="chip chip--amber">Trust</span>
+            <h2>Cybersecurity &amp; risk management</h2>
+            <p class="muted">Identify weaknesses, strengthen access controls, and make security part of everyday operations. Protect your applications, infrastructure, and business data.</p>
+            <ul class="info-list">
+              <li><i class="fa-solid fa-lock" aria-hidden="true"></i><span>Identity, access controls &amp; secrets management</span></li>
+              <li><i class="fa-solid fa-file-shield" aria-hidden="true"></i><span>Security policies &amp; compliance preparation</span></li>
+              <li><i class="fa-solid fa-user-shield" aria-hidden="true"></i><span>Risk assessments &amp; remediation guidance</span></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--tight" data-aos="fade-up" aria-labelledby="capabilities-title">
+      <div class="container">
+        <div class="section__head" data-aos="fade-up">
+          <div>
+            <p class="section__eyebrow"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Capabilities</p>
+            <h2 id="capabilities-title" class="section__title">Specialist support where you need it</h2>
+            <p class="section__lead">Combine our core services with focused help in automation, monitoring, cost management, and team enablement.</p>
+          </div>
+        </div>
+        <div class="pillars pillars--media pillars--services">
+          <article class="pillar pillar--media neo-card neo-card--dark" data-aos="fade-up" data-aos-delay="0">
+            <img src="Images/signal-shipping.webp" alt="" width="640" height="420" loading="lazy">
+            <div class="pillar__overlay">
+              <span class="pillar__icon" aria-hidden="true"><i class="fa-solid fa-flag-checkered"></i></span>
+              <h3>Delivery automation</h3>
+              <p>Reduce manual work with automated testing and release workflows.</p>
+            </div>
+          </article>
+          <article class="pillar pillar--media neo-card neo-card--dark" data-aos="fade-up" data-aos-delay="80">
+            <img src="Images/signal-observability.webp" alt="" width="640" height="420" loading="lazy">
+            <div class="pillar__overlay">
+              <span class="pillar__icon" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></span>
+              <h3>System monitoring</h3>
+              <p>Bring logs, metrics, and alerts together to spot issues sooner.</p>
+            </div>
+          </article>
+          <article class="pillar pillar--media neo-card neo-card--dark" data-aos="fade-up" data-aos-delay="160">
+            <img src="Images/signal-cloudops.webp" alt="" width="640" height="420" loading="lazy">
+            <div class="pillar__overlay">
+              <span class="pillar__icon" aria-hidden="true"><i class="fa-solid fa-coins"></i></span>
+              <h3>Cloud cost management</h3>
+              <p>Review resource usage and find opportunities to reduce waste.</p>
+            </div>
+          </article>
+          <article class="pillar pillar--media neo-card neo-card--dark" data-aos="fade-up" data-aos-delay="240">
+            <img src="Images/process-flow.webp" alt="" width="640" height="420" loading="lazy">
+            <div class="pillar__overlay">
+              <span class="pillar__icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+              <h3>Technical consulting</h3>
+              <p>Make informed decisions about architecture, tools, and priorities.</p>
+            </div>
+          </article>
+          <article class="pillar pillar--media neo-card neo-card--dark" data-aos="fade-up" data-aos-delay="320">
+            <img src="Images/office-collab.webp" alt="" width="640" height="420" loading="lazy">
+            <div class="pillar__overlay">
+              <span class="pillar__icon" aria-hidden="true"><i class="fa-solid fa-people-group"></i></span>
+              <h3>Team training</h3>
+              <p>Give your team the guidance and documentation to manage its systems.</p>
+            </div>
+          </article>
+          <article class="pillar pillar--media neo-card neo-card--dark" id="it-support" data-aos="fade-up" data-aos-delay="400">
+            <img src="Images/signal-warroom.webp" alt="" width="640" height="420" loading="lazy">
+            <div class="pillar__overlay">
+              <span class="pillar__icon" aria-hidden="true"><i class="fa-solid fa-helmet-safety"></i></span>
+              <h3>IT support &amp; recovery</h3>
+              <p>Prepare recovery plans and clear steps for resolving technical issues.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-outcomes" data-aos="fade-up" aria-labelledby="outcomes-title">
+      <div class="container">
+        <div class="section__head" data-aos="fade-up">
+          <div>
+            <p class="section__eyebrow"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Outcomes</p>
+            <h2 id="outcomes-title" class="section__title">From challenge to working solution</h2>
+            <p class="section__lead">We agree on priorities and deliverables, then work with your team to build, validate, and support a solution that fits.</p>
+          </div>
+        </div>
+        <div class="outcomes outcomes--signal">
+          <article class="outcome neo-card neo-card--dark" data-aos="fade-up" data-aos-delay="0">
+            <span class="outcome__icon" aria-hidden="true"><i class="fa-solid fa-map"></i></span>
+            <span class="outcome__week mono">Discovery</span>
+            <h3>Understand your needs</h3>
+            <p>Review current systems, business goals, and the challenges your team faces.</p>
+          </article>
+          <article class="outcome neo-card neo-card--dark" data-aos="fade-up" data-aos-delay="80">
+            <span class="outcome__icon" aria-hidden="true"><i class="fa-solid fa-flag-checkered"></i></span>
+            <span class="outcome__week mono">Planning</span>
+            <h3>Agree on a solution</h3>
+            <p>Define the scope, priorities, and acceptance criteria before implementation.</p>
+          </article>
+          <article class="outcome neo-card neo-card--dark" data-aos="fade-up" data-aos-delay="160">
+            <span class="outcome__icon" aria-hidden="true"><i class="fa-solid fa-rocket"></i></span>
+            <span class="outcome__week mono">Delivery</span>
+            <h3>Build &amp; validate</h3>
+            <p>Develop and test the solution, review progress, and prepare for launch.</p>
+          </article>
+          <article class="outcome outcome--accent neo-card neo-card--dark" data-aos="fade-up" data-aos-delay="240">
+            <span class="outcome__icon" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></span>
+            <span class="outcome__week mono">Ongoing</span>
+            <h3>Support &amp; improve</h3>
+            <p>Provide documentation, handover, and maintenance based on the agreed scope.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight services-engagement" data-aos="fade-up" aria-labelledby="engagement-title">
+      <div class="container">
+        <div class="engagement-panel">
+          <header class="engagement-panel__head">
+            <p class="section__eyebrow"><i class="fa-solid fa-route" aria-hidden="true"></i> Engagement model</p>
+            <h2 id="engagement-title" class="section__title">How we work with you</h2>
+            <p class="section__lead">Clear communication, practical milestones, and regular reviews keep your team involved from discovery to handover.</p>
+          </header>
+          <ol class="engagement engagement--signal">
+            <li class="engagement__step" data-aos="fade-up" data-aos-delay="0">
+              <span class="engagement__num mono" aria-hidden="true">01</span>
+              <span class="engagement__icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
+              <div class="engagement__body">
+                <span class="engagement__meta mono">Assessment</span>
+                <h3>Discover</h3>
+                <p>Listen to your requirements and assess the technology you already use.</p>
+              </div>
+            </li>
+            <li class="engagement__step" data-aos="fade-up" data-aos-delay="80">
+              <span class="engagement__num mono" aria-hidden="true">02</span>
+              <span class="engagement__icon" aria-hidden="true"><i class="fa-solid fa-pen-ruler"></i></span>
+              <div class="engagement__body">
+                <span class="engagement__meta mono">Roadmap</span>
+                <h3>Plan</h3>
+                <p>Define the architecture, milestones, budget, and responsibilities.</p>
+              </div>
+            </li>
+            <li class="engagement__step" data-aos="fade-up" data-aos-delay="160">
+              <span class="engagement__num mono" aria-hidden="true">03</span>
+              <span class="engagement__icon" aria-hidden="true"><i class="fa-solid fa-rocket"></i></span>
+              <div class="engagement__body">
+                <span class="engagement__meta mono">Implementation</span>
+                <h3>Deliver</h3>
+                <p>Build, integrate, and test in agreed stages with regular progress updates.</p>
+              </div>
+            </li>
+            <li class="engagement__step" data-aos="fade-up" data-aos-delay="240">
+              <span class="engagement__num mono" aria-hidden="true">04</span>
+              <span class="engagement__icon" aria-hidden="true"><i class="fa-solid fa-gauge-high"></i></span>
+              <div class="engagement__body">
+                <span class="engagement__meta mono">Maintenance</span>
+                <h3>Support</h3>
+                <p>Help your team adopt the solution and plan maintenance and improvements.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" data-aos="fade-up" aria-labelledby="packages-title">
+      <div class="container">
+        <div class="section__head" data-aos="fade-up">
+          <div>
+            <p class="section__eyebrow"><i class="fa-solid fa-tags" aria-hidden="true"></i> Packages</p>
+            <h2 id="packages-title" class="section__title">Support that fits your needs</h2>
+            <p class="section__lead">Begin with an assessment, commission a defined project, or arrange ongoing support. Scope, timing, and pricing reflect your requirements.</p>
+          </div>
+        </div>
+        <div class="pricing pricing--signal">
+          <article class="price-card price-card--signal neo-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="price-card__head">
+              <p class="chip">Assessment</p>
+              <p class="price-card__amount">Focused <span>/ review</span></p>
+              <p class="price-card__blurb">Understand your current setup and identify useful next steps.</p>
+            </div>
+            <div class="price-card__panel">
+              <p class="price-card__panel-label">Includes</p>
+              <ul>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Requirements workshop &amp; system review</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Technology gaps &amp; risk assessment</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Recommended architecture &amp; priorities</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Practical roadmap &amp; next steps</span></li>
+              </ul>
+              <a class="btn btn--secondary btn--block" href="contact.html">Request an assessment</a>
+            </div>
+          </article>
+          <article class="price-card price-card--signal is-featured neo-card" data-aos="fade-up" data-aos-delay="80">
+            <span class="price-card__badge">Project focused</span>
+            <div class="price-card__head">
+              <p class="chip chip--teal">Project delivery</p>
+              <p class="price-card__amount">Defined <span>/ project</span></p>
+              <p class="price-card__blurb">Build or modernize a solution with clear scope and milestones.</p>
+            </div>
+            <div class="price-card__panel">
+              <p class="price-card__panel-label">Planned deliverables</p>
+              <ul>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Solution design &amp; implementation</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Testing &amp; system integration</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Security review &amp; launch planning</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Documentation &amp; team handover</span></li>
+              </ul>
+              <a class="btn btn--primary btn--block" href="contact.html">Discuss your project</a>
+            </div>
+          </article>
+          <article class="price-card price-card--signal neo-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="price-card__head">
+              <p class="chip chip--amber">Managed support</p>
+              <p class="price-card__amount">Ongoing <span>/ support</span></p>
+              <p class="price-card__blurb">Keep your systems maintained with support tailored to your environment.</p>
+            </div>
+            <div class="price-card__panel">
+              <p class="price-card__panel-label">Tailored support</p>
+              <ul>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Monitoring &amp; maintenance planning</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Troubleshooting &amp; issue resolution</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>System updates &amp; configuration support</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Regular reviews &amp; improvement planning</span></li>
+              </ul>
+              <a class="btn btn--secondary btn--block" href="contact.html">Discuss support options</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight testimonials" data-aos="fade-up" aria-labelledby="service-reviews-title">
+      <div class="container">
+        <div class="section__head" data-aos="fade-up">
+          <div>
+            <p class="section__eyebrow"><i class="fa-solid fa-quote-left" aria-hidden="true"></i> Who we support</p>
+            <h2 id="service-reviews-title" class="section__title">Expertise for every stage of business</h2>
+            <p class="section__lead">Get technical help tailored to your team, whether you are building something new or improving an established environment.</p>
+          </div>
+        </div>
+        <div class="reviews-grid">
+          <article class="review-card neo-card" data-aos="fade-up"><h3>Growing businesses</h3><p>Build connected tools and reliable infrastructure that support your next stage of growth.</p></article>
+          <article class="review-card review-card--featured neo-card neo-card--dark" data-aos="fade-up"><h3>Established organizations</h3><p>Modernize existing systems, improve security practices, and simplify technology operations.</p></article>
+          <article class="review-card neo-card" data-aos="fade-up"><h3>Internal technology teams</h3><p>Add specialist expertise, delivery capacity, and guidance alongside your existing people.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--faq" data-aos="fade-up" aria-labelledby="service-faq-title">
+      <div class="container">
+        <div class="faq-layout">
+          <div class="faq-layout__intro" data-aos="fade-up">
+            <p class="section__eyebrow"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> FAQ</p>
+            <h2 id="service-faq-title" class="section__title">Questions about our services</h2>
+            <p class="section__lead">Practical answers about scope, timelines, existing systems, and support before you get started.</p>
+            <a class="btn btn--secondary" href="contact.html">Still unsure? Talk to us</a>
+          </div>
+          <div class="faq faq--shell">
+            <div class="faq__item neo-card" data-aos="fade-up">
+              <button class="faq__question" type="button">What types of businesses do you work with?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+              <div class="faq__answer"><p>We work with businesses and technology teams that need software, cloud, security, or support services. We start by understanding your requirements and identifying where our expertise fits.</p></div>
+            </div>
+            <div class="faq__item neo-card" data-aos="fade-up">
+              <button class="faq__question" type="button">How long will my project take?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+              <div class="faq__answer"><p>Timelines depend on scope, complexity, and integration needs. We agree on milestones and a delivery schedule after the initial assessment.</p></div>
+            </div>
+            <div class="faq__item neo-card" data-aos="fade-up">
+              <button class="faq__question" type="button">Can we begin with a smaller project?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+              <div class="faq__answer"><p>Yes. A focused assessment or clearly scoped project can address an immediate need before you plan a larger engagement.</p></div>
+            </div>
+            <div class="faq__item neo-card" data-aos="fade-up">
+              <button class="faq__question" type="button">Can you help improve our security?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+              <div class="faq__answer"><p>We can review access controls, application risks, and infrastructure practices, then help prioritize improvements. Compliance requirements are discussed as part of your scope.</p></div>
+            </div>
+            <div class="faq__item neo-card" data-aos="fade-up">
+              <button class="faq__question" type="button">Can you work with our existing systems?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+              <div class="faq__answer"><p>Yes. We review your tools, infrastructure, and vendor relationships to plan integrations and improvements that fit your environment.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container" data-aos="zoom-in">
+        <div class="cta-band cta-band--sharp" data-aos="zoom-in">
+          <div class="cta-band__bg" aria-hidden="true"><img src="Images/cta-signal.webp?v=sharp" alt="" width="1920" height="1080" loading="lazy"></div>
+          <div class="cta-band__content">
+            <p class="cta-band__eyebrow">Next step</p>
+            <h2 class="section__title">Let&rsquo;s solve your next technology challenge</h2>
+            <p class="cta-band__text">Tell us about your goals, current systems, and priorities. We will help define a practical next step.</p>
+            <div class="btn-group">
+              <a class="btn btn--teal" href="contact.html">Schedule a call</a>
+              <a class="btn btn--ghost" href="projects.html">Explore our projects</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--clean">
+    <div class="container">
+      <div class="footer-clean__grid">
+        <div class="footer-clean__brand" data-aos="fade-up">
+          <a class="brand" href="index.html" aria-label="Stackly home">
+            <span class="brand__logo themed-logo" role="img" aria-label="Stackly Technology"></span>
+          </a>
+          <p>Practical IT solutions for a stronger business. We help you build, secure, and scale your digital foundation.</p>
+          <a class="footer-clean__cta" href="contact.html">Let&rsquo;s talk about your project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <nav class="social-links social-links--footer" aria-label="Social media">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn (opens in a new tab)"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub (opens in a new tab)"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit X (opens in a new tab)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram (opens in a new tab)"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          </nav>
+        </div>
+        <nav class="footer-clean__column" aria-labelledby="footer-explore-title" data-aos="fade-up">
+          <h2 id="footer-explore-title">Explore</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-clean__column" aria-labelledby="footer-services-title" data-aos="fade-up">
+          <h2 id="footer-services-title">Our expertise</h2>
+          <ul>
+            <li><a href="services.html">Platform engineering</a></li>
+            <li><a href="services.html">Cloud operations</a></li>
+            <li><a href="services.html">Security &amp; compliance</a></li>
+            <li><a href="services.html">Monitoring &amp; reliability</a></li>
+            <li><a href="services.html#software-development">Software development</a></li>
+            <li><a href="services.html#it-support">IT support &amp; maintenance</a></li>
+          </ul>
+        </nav>
+        <div class="footer-clean__column" data-aos="fade-up">
+          <h2>Get in touch</h2>
+          <address class="footer-clean__contact">
+            <a href="mailto:hello@stackly.tech"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>hello@stackly.tech</span></a>
+            <a href="tel:+15125550142"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>+1 (512) 555-0142</span></a>
+            <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>1200 Signal Way, Suite 400<br>Austin, TX 78701</span></p>
+            <a href="contact.html"><i class="fa-solid fa-comments" aria-hidden="true"></i><span>Contact our team</span></a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-clean__bottom" data-aos="fade-up">
+        <p>&copy; <span data-year></span> Stackly Technology. All rights reserved.</p>
+        <nav aria-label="Footer account links">
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js?v=aos-site-1" defer></script>
+</body>
+</html>

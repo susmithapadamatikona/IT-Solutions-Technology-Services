@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to your Stackly Technology client workspace — Graphite Signal theme.">
+  <title>Sign In — Stackly Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css?v=navy-teal-1">
+  <link rel="stylesheet" href="css/neumorphism.css?v=3">
+</head>
+<body class="page-auth">
+    <div class="preloader" role="status" aria-live="polite" aria-label="Loading">
+    <div class="preloader__inner">
+      <div class="preloader__mark">
+        <div class="preloader__orbit" aria-hidden="true"></div>
+        <span class="themed-logo" aria-hidden="true"></span>
+      </div>
+      <div class="preloader__bar" aria-hidden="true"><span></span></div>
+    </div>
+    <span class="sr-only">Loading...</span>
+  </div>
+
+  <div class="site-bg" aria-hidden="true"></div>
+
+  <main id="main">
+    <div class="auth-page auth-page--cover">
+      <div class="auth-page__bg" aria-hidden="true">
+        <img src="Images/auth-panel.webp" width="1600" height="1200" alt="">
+      </div>
+
+      <div class="auth-page__panel">
+        <div class="auth-card auth-card--glass neo-card" data-aos="zoom-in">
+          <a class="brand auth-card__brand" href="index.html" aria-label="Stackly Technology — home">
+            <span class="brand__logo themed-logo" role="img" aria-label="Stackly Technology"></span>
+          </a>
+          <h1 class="auth-card__title">Welcome back</h1>
+          <p class="auth-card__lead">Sign in to continue to your Stackly dashboard.</p>
+
+          <form class="form" data-validate data-auth-login action="#" method="post" novalidate>
+            <div class="field">
+              <label for="login-email">Email address</label>
+              <input type="email" id="login-email" name="email" autocomplete="email" placeholder="you@company.com" required>
+              <span class="field__error" role="alert">Enter a valid email address.</span>
+            </div>
+
+            <div class="field">
+              <label for="login-password">Password</label>
+              <div class="field__password">
+                <input type="password" id="login-password" name="password" autocomplete="current-password" placeholder="Enter password" required minlength="8">
+                <button class="field__toggle" type="button" data-password-toggle aria-label="Show password">
+                  <i class="fa-regular fa-eye" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="field__error" role="alert">Password must be at least 8 characters.</span>
+            </div>
+
+            <div class="auth-form__row">
+              <label class="auth-check">
+                <input type="checkbox" name="remember" value="1">
+                <span>Remember me</span>
+              </label>
+              <a class="auth-forgot" href="404.html">Forgot password?</a>
+            </div>
+
+            <fieldset class="auth-role">
+              <legend>Sign in as</legend>
+              <div class="auth-role__options">
+                <label class="auth-role__option">
+                  <input type="radio" name="role" value="client" checked required>
+                  <span><i class="fa-solid fa-user" aria-hidden="true"></i> Client</span>
+                </label>
+                <label class="auth-role__option">
+                  <input type="radio" name="role" value="admin" required>
+                  <span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Admin</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn--primary btn--block">Sign in</button>
+
+            <p class="auth-card__switch">
+              New to Stackly? <a href="register.html">Create an account</a>
+            </p>
+          </form>
+
+          <div class="login-social">
+            <p>Connect with us</p>
+          <nav class="social-links social-links--login" aria-label="Social media">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn (opens in a new tab)"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub (opens in a new tab)"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit X (opens in a new tab)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram (opens in a new tab)"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          </nav>
+          </div>
+
+          <a class="auth-card__home" href="index.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to home</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js?v=aos-site-1" defer></script>
+</body>
+</html>
